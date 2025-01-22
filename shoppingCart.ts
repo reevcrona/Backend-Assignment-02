@@ -30,14 +30,14 @@ const addToCart = (product:Product):void => {
 };
 
 // Step 5: Function to calculate the total price of the cart (using arrow function)
-const calculateTotal = (cart) => {
+const calculateTotal = (cart:Product[]):string => {
     let total = 0;
     cart.forEach((item) => total += item.price);
     return total.toFixed(2);
 };
 
 // Step 6: Function to display the cart contents (using arrow function)
-const displayCart = (cart) => {
+const displayCart = (cart:Product[]):void => {
     if (cart.length === 0) {
         console.log('Your cart is empty.');
         return;
